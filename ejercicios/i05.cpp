@@ -7,7 +7,7 @@ using namespace std;
 
 class Cadena {
 private:
-    char* buffer; //--> almacena el texto
+    char* buffer; //-> almacena el texto
 
 public:
     //constructor--> crea el buffer dinamicamente
@@ -16,13 +16,13 @@ public:
         strcpy(buffer, texto);
     }
 
-    //constructor de copia profunda-> crea una copia independiente del buffer
+    //constructor d copia profunda-> crea una copia independiente del buffer
     Cadena(const Cadena& otra) {
         buffer = new char[strlen(otra.buffer) + 1];
         strcpy(buffer, otra.buffer);
     }
 
-    //destructor -->libera la memoria del buffer
+    //destructor-->libera la memoria del buffer
     ~Cadena() {
         delete[] buffer;
     }
@@ -34,7 +34,7 @@ public:
         strcpy(buffer, nuevoTexto);
     }
 
-    //mostrar el contenido actual
+    //mostrar el contnido actual
     void mostrar() const {
         cout << buffer << endl;
     }
